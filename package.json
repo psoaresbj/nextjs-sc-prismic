@@ -1,0 +1,41 @@
+{
+  "name": "nextjs-sc-prismic",
+  "description": "Nextjs, Styled Components and Prismic project bootstrap",
+  "version": "1.0.0",
+  "author": "Paulo Soares - @psoaresbj",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.21.0",
+    "eslint-config-uphold-react": "^1.0.0",
+    "prettier": "1.18.2"
+  },
+  "dependencies": {
+    "@prismicio/client": "^4.0.0",
+    "@psoares/svg-list": "^1.1.4",
+    "html-react-parser": "^1.2.4",
+    "i18next": "^19.8.3",
+    "js-cookie": "^2.2.1",
+    "next": "^10.0.1",
+    "next-manifest": "^3.0.1",
+    "polished": "^4.1.1",
+    "prismic-reactjs": "0.3.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-i18next": "^11.7.3",
+    "react-styled-flexboxgrid": "^3.2.1",
+    "styled-components": "^5.2.1",
+    "styled-gen": "^1.4.4",
+    "styled-reset": "^4.3.4"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "generate:icons": "yarn svglist generate",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nextjs-sc-prismic"
+  }
+}
