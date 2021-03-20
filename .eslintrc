@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "uphold-react"
+  ],
+  "globals": {
+    "document": true,
+    "gtag": true,
+    "navigator": true,
+    "window": true
+  },
+  "rules": {
+    "no-nested-ternary": 0,
+    "no-process-env": 0,
+    "no-use-before-define": 0,
+    "react/require-default-props": 0
+  }
+}

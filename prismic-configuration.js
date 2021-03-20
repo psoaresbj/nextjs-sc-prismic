@@ -1,12 +1,12 @@
 module.exports = {
   // -- Access Token if the repository is not public
   // Generate a token in your dashboard and configure it here if your repository is private
-  accessToken: '',
+  accessToken: process.env.API_TOKEN || '',
 
   // -- Prismic API endpoint
   // Determines which repository to query and fetch data from
   // Configure your site's access point here
-  apiEndpoint: 'https://your-cdn.cdn.prismic.io/api/v2',
+  apiEndpoint: process.env.API_URL,
 
   // Additional helper function for Next/Link component
   hrefResolver: doc => {

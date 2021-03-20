@@ -2,7 +2,7 @@ const withManifest = require('next-manifest');
 const langConfig = require('./lang-config');
 
 const i18n = {
-  defaultLocale: langConfig.find(({ isDefault }) => isDefault)?.code || 'en-us',
+  defaultLocale: langConfig.find(({ isDefault }) => isDefault)?.code || 'pt-pt',
   locales: langConfig.map(({ code }) => code)
 };
 

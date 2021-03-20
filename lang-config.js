@@ -1,3 +1,3 @@
-const langConfig = [{ code: 'en-us', isDefault: true, label: 'EN' }, { code: 'pt-pt', label: 'PT' }];
+const langConfig = [{ code: 'pt-pt', isDefault: true, label: 'PT' }, { code: 'en-us', label: 'EN' }];
 
 module.exports = langConfig;
