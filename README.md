@@ -12,3 +12,6 @@ Project bootstrap with a lot of UI tools and base connection to prismic.
   - Modals management → [react-modal-handler](https://github.com/psoaresbj/react-modal-handler)
   - Add steroirds to Styled-components → [@psoares/svg-list](https://github.com/psoaresbj/styled-gen)
   - Grid → [react-styled-flexboxgrid](https://github.com/LoicMahieu/react-styled-flexboxgrid)
+
+## ENV vars
+  Change the `.env.dist` file name to `.env` and add your env vars
