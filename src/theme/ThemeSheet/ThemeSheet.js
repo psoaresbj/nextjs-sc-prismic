@@ -19,8 +19,20 @@ export const ThemeSheet = props => {
 
   return (
     <Grid p="2 null 5">
-      {/* Icons */}
       <Row>
+        <Col xs={12}>
+          <Heading h1>Theme sheet page</Heading>
+          <Text large mt={1}>
+            This page make us to keep track with the base options we have on the theme and have some examples of UI
+            components and helpers.
+          </Text>
+          <Text mt={0.5} small>
+            A nice to know about this page: Don&apos;t have any specific created component to build it...
+          </Text>
+        </Col>
+      </Row>
+      {/* Icons */}
+      <Row mt={3}>
         <Col xs={12}>
           <Heading h4 p06>
             Icons
