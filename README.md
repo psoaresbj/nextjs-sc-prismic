@@ -1,5 +1,5 @@
 # Next.js Multi-language website with Styled Components and Prismic
-Project bootstrap
+Project bootstrap with a lot of UI tools and base connection to prismic.
 
 ## Main docs
   - [Nextjs](https://nextjs.org/docs)
