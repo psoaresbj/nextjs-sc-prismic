@@ -56,3 +56,9 @@ export const getPage = async ({ locale = defaultLocale, type }) => {
 
   return { config, document };
 };
+
+export const getSingle = async type => {
+  const response = await client().getSingle(type);
+
+  return response;
+};
