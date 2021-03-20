@@ -27,6 +27,10 @@ export const GlobalStyle = createGlobalStyle`
 
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+    &.with-modal {
+      overflow-y: hidden;
+    }
   }
 
   body {
@@ -67,7 +71,8 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  b {
+  b,
+  strong {
     font-weight: ${fonts.weights.bold};
   }
 `;

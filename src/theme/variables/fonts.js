@@ -8,14 +8,23 @@ const weights = {
   black: 900
 };
 
-const sizes = {
-  xxs: 10,
-  xs: 12,
-  sm: 14,
-  base: 16,
-  lg: 18,
-  xl: 20,
-  xxl: 24
+export const headingSizes = {
+  h1: { xs: [48, 1], md: [64, 1] },
+  h2: { xs: [36, 1.1], md: [48, 1.1] },
+  h3: { xs: [24, 1.25], md: [36, 1.25] },
+  h4: { xs: [20, 1.25], md: [24, 1.25] },
+  h5: { xs: [18, 1.25] },
+  h6: { xs: [14, 1.25] }
+};
+
+export const bodySizes = {
+  XXLarge: [24, 1.5],
+  XLarge: [20, 1.5],
+  large: [18, 1.5],
+  default: [16, 1.5],
+  small: [14, 1.5],
+  XSmall: [12, 1.25],
+  XXSmall: [10, 1.25]
 };
 
 export const fonts = {
@@ -23,6 +32,5 @@ export const fonts = {
     primary: "'Gilroy', sans-serif",
     secondary: "'Source Sans Pro', sans-serif"
   },
-  weights,
-  sizes
+  weights
 };

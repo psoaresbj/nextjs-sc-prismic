@@ -11,7 +11,7 @@ const iconsCollections = {
 const iconFamilies = Object.keys(iconsCollections);
 
 const renderPaths = icon =>
-  icon.paths.map((path, index) => <path d={path} fill="currentColor" key={`path-${index}`} />);
+  icon.paths.map((path, index) => <path {...path} fill="currentColor" key={`path-${index}`} />);
 
 const IconSvg = ({ className, family, icon }) => {
   const selectedFamily = family && iconsCollections[family] ? family : iconFamilies[0];

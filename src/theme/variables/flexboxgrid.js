@@ -5,5 +5,5 @@ export const flexboxgrid = {
   gridSize: 12,
   gutterWidth: 2,
   mediaQuery: 'only screen',
-  outerMargin: 0
+  outerMargin: 1.5
 };
