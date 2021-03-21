@@ -1,12 +1,11 @@
 import { Code, Col, Div, Grid, Heading, Icon, Row, Text } from '../components';
-import { RichText } from '../../components';
+import { RichText, Slices } from '../../components';
 import { bodySizes, headingSizes } from '../variables/fonts';
 import { colors } from '../variables/colors';
 import { flexboxgrid } from '../variables/flexboxgrid';
 import { modal } from 'react-modal-handler';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Slices from '../../components/Slices/Slices';
 import ui from '../components/Icon/ui';
 
 const icons = Object.keys(ui);

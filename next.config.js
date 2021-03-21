@@ -12,13 +12,13 @@ const manifest = {
   icons: [
     {
       sizes: '192x192',
-      src: '/img/android-chrome-192x192.png',
-      type: 'img/png'
+      src: '/images/android-chrome-192x192.png',
+      type: 'images/png'
     },
     {
       sizes: '512x512',
-      src: '/img/android-chrome-512x512.png',
-      type: 'img/png'
+      src: '/images/android-chrome-512x512.png',
+      type: 'images/png'
     }
   ],
   name: 'name',

@@ -27,12 +27,6 @@ export const queryRepeatableDocuments = async filter => {
   return allRoutes.filter(filter);
 };
 
-export const testQuery = async () => {
-  const allRoutes = await fetchDocuments();
-
-  return allRoutes.filter(doc => doc.type === 'config').slice(0, 5);
-};
-
 export const getPage = async ({ locale = defaultLocale, type }) => {
   const response = await client().query(Prismic.Predicates.any('document.type', [configType, `page_${type}`]), {
     lang: '*'
@@ -49,12 +43,12 @@ export const getPage = async ({ locale = defaultLocale, type }) => {
     results.find(({ lang, type }) => type === configType && lang === defaultLocale) ||
     {};
 
-  const document =
+  const page =
     results.find(({ lang, type }) => type === `page_${type}` && lang === locale) ||
     results.find(({ lang, type }) => type === `page_${type}` && lang === defaultLocale) ||
     {};
 
-  return { config, document };
+  return { config, page };
 };
 
 export const getSingle = async type => {

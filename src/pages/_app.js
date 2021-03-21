@@ -1,6 +1,7 @@
 import { DataProvider } from '../components/DataProvider/DataProvider';
 import { GlobalStyle } from '../theme/components';
 import { ModalManager } from 'react-modal-handler';
+import { SEO } from '../components';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -16,12 +17,13 @@ const MyApp = props => {
 
   const config = {
     ...baseConfig,
-    url: `${baseUrl}/${locale}${pathname}`
+    seo_url: `${baseUrl}/${locale}${pathname}`
   };
 
   return (
     <DataProvider config={config} locale={locale} page={page}>
       <ThemeProvider theme={theme}>
+        <SEO />
         <GlobalStyle />
         <ModalManager modals={modals} />
         <Component {...pageProps} />

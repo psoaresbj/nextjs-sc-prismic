@@ -40,5 +40,3 @@ export const Slices = props => {
 Slices.propTypes = {
   slices: PropTypes.array
 };
-
-export default Slices;
