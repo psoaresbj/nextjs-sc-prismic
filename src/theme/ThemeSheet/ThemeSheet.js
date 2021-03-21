@@ -125,7 +125,12 @@ export const ThemeSheet = props => {
     ${flexboxgrid.gridSize} Columns
     Outer margin: ${flexboxgrid.outerMargin * 16}px
     Gutter: ${flexboxgrid.gutterWidth * 16}px
-    Width: ${(flexboxgrid.container.lg - (flexboxgrid.outerMargin * 2 - flexboxgrid.gutterWidth)) * 16}px
+    Col size: ${((flexboxgrid.container.lg -
+      flexboxgrid.outerMargin * 2 -
+      flexboxgrid.gutterWidth * (flexboxgrid.gridSize - 1)) /
+      flexboxgrid.gridSize) *
+      16}px
+    Width: ${(flexboxgrid.container.lg - flexboxgrid.outerMargin * 2) * 16}px
   */
   `}</pre>
             </Code>
