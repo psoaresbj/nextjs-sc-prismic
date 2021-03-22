@@ -1,0 +1,107 @@
+{
+  "SEO" : {
+    "seo_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Title"
+      }
+    },
+    "seo_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Description"
+      }
+    },
+    "seo_keywords" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Keywords"
+      }
+    },
+    "seo_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Image"
+      }
+    }
+  },
+  "Content" : {
+    "rich_text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "allowTargetBlank" : true,
+        "label" : "Rich Text"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : { },
+        "choices" : {
+          "rich_content" : {
+            "type" : "Slice",
+            "fieldset" : "Rich Content",
+            "description" : "Slice with Rich content",
+            "icon" : "face",
+            "display" : "list",
+            "non-repeat" : {
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "allowTargetBlank" : true,
+                  "label" : "Content"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "gallery" : {
+            "type" : "Slice",
+            "fieldset" : "Gallery",
+            "description" : "Slice with photos",
+            "icon" : "monochrome_photos",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Config" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug"
+      }
+    },
+    "document_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Document Title",
+        "useAsTitle" : true
+      }
+    },
+    "is_live" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : true,
+        "label" : "Page is Live"
+      }
+    }
+  }
+}

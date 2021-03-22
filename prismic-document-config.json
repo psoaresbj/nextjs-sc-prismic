@@ -1,0 +1,39 @@
+{
+  "SEO" : {
+    "seo_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Default Title"
+      }
+    },
+    "seo_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Default Description"
+      }
+    },
+    "seo_keywords" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Default Keywords"
+      }
+    },
+    "seo_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Default Image"
+      }
+    }
+  },
+  "Config" : {
+    "document_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Document title",
+        "useAsTitle" : true
+      }
+    }
+  }
+}

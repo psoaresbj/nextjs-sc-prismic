@@ -4,6 +4,7 @@ import langConfig from '../../lang-config';
 
 const defaultLocale = langConfig.find(({ isDefault }) => isDefault)?.code;
 const configType = 'config';
+const pagePrefix = 'page_-_';
 
 async function fetchDocuments(query = '', page = 1, routes = []) {
   const response = await client().query(query, { lang: '*', page, pageSize: 100 });
@@ -27,8 +28,10 @@ export const queryRepeatableDocuments = async filter => {
   return allRoutes.filter(filter);
 };
 
-export const getPage = async ({ locale = defaultLocale, type }) => {
-  const response = await client().query(Prismic.Predicates.any('document.type', [configType, `page_${type}`]), {
+export const getPage = async ({ locale = defaultLocale, noPagePrefix = false, type }) => {
+  const pageType = `${noPagePrefix ? '' : pagePrefix}${type}`;
+
+  const response = await client().query(Prismic.Predicates.any('document.type', [configType, pageType]), {
     lang: '*'
   });
 
@@ -44,15 +47,9 @@ export const getPage = async ({ locale = defaultLocale, type }) => {
     {};
 
   const page =
-    results.find(({ lang, type }) => type === `page_${type}` && lang === locale) ||
-    results.find(({ lang, type }) => type === `page_${type}` && lang === defaultLocale) ||
+    results.find(({ lang, type }) => type === pageType && lang === locale) ||
+    results.find(({ lang, type }) => type === pageType && lang === defaultLocale) ||
     {};
 
   return { config, page };
-};
-
-export const getSingle = async type => {
-  const response = await client().getSingle(type);
-
-  return response;
 };

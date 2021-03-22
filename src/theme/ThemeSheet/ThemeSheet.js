@@ -15,12 +15,12 @@ const headings = Object.keys(headingSizes);
 const textSizes = Object.keys(bodySizes);
 
 export const ThemeSheet = props => {
-  const text = props?.data?.rich_text;
-  const slices = props?.data?.body1;
+  const text = props?.page?.data?.rich_text;
+  const slices = props?.page?.data?.body;
 
   return (
     <>
-      <Grid p="2 null 5">
+      <Grid p={`2 null ${slices ? 0 : 5}`}>
         <Row>
           <Col xs={12}>
             <Heading h1>Theme sheet page</Heading>
@@ -228,7 +228,7 @@ export const ThemeSheet = props => {
               </Col>
             </Row>
           </Grid>
-          <Div mt={1}>
+          <Div mt={1} pb={5}>
             <Slices slices={slices} />
           </Div>
         </>
@@ -238,5 +238,5 @@ export const ThemeSheet = props => {
 };
 
 ThemeSheet.propTypes = {
-  data: PropTypes.object
+  page: PropTypes.object
 };
