@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { bodySizes, fonts, headingSizes } from '../../variables/fonts';
 import { generateProps, mq, variations } from 'styled-gen';
 import { getTag } from '../../helpers/getTag';
@@ -5,7 +6,8 @@ import styled, { css } from 'styled-components';
 
 const applySingularSize = size => css`
   font-size: ${(typeof size === 'number' ? size : size[0]) / 16}rem;
-  line-height: ${(typeof size === 'number' ? size : size[1]) || 1};
+  letter-spacing: ${typeof size === 'number' ? undefined : size[2] !== undefined ? `${size[2] / 16}rem` : undefined};
+  line-height: ${typeof size === 'number' ? undefined : size[1] !== undefined ? size[1] : undefined};
 `;
 
 const applyMultipleSizes = sizes =>
